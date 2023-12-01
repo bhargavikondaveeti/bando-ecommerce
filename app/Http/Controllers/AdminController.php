@@ -53,18 +53,6 @@ class AdminController extends Controller
         $product->quantity = $request->quantity;
         $product->price = $request->price;
         $product->discount_price = $request->discount_price;
-        $product->play = $request->play;
-
-        $file = $request->play;
-        $filename = time() . '.' . $file->getClientOriginalExtension();
-        $file->move('product', $filename);
-
-        $product->play=$filename;
-        $validator = Validator::make($request->all(), [
-            'file' => 'max:5120', //5MB
-        ]);
-
-
         $image=$request->image;
         $imagename=time().'.'. $image->getClientOriginalExtension();
 

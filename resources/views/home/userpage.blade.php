@@ -1,38 +1,34 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GTA-TV</title>
-@include('home.css')
 
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <title>Bando Merch</title>
+    @include('home.css')
 
 </head>
+
 <body>
 @include('sweetalert::alert')
 @include('home.header')
-
-<!-- home section start -->
-@include('home.slider')
-
-<!-- about section start -->
-@include('home.about')
-
-<!-- services section start -->
-@include('home.songs')
 
 @include('home.product')
 <!-- teams section start -->
 
 <!-- contact section start -->
-@include('home.contact')
+@include('home.about')
 
 <!-- footer section start -->
 @include('home.footer')
-<!-- script-->
+
 @include('home.script')
+
 
 </body>
 </html>
+

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -79,7 +80,13 @@ route::get('/stripe/{totalprice}',[HomeController::class,'stripe']);
 
 Route::post('/stripe/{totalprice}', [HomeController::class,'stripePost'])->name('stripe.post');
 
-route::get('listen/{id}',[HomeController::class,'listen']);
+route::get('mpesaa',[HomeController::class,'mpesaa']);
+
+Route::get('/contact',[ContactController::class,'show'])->name('contact.show');
+
+Route::post('/contact',[ContactController::class,'submit'])->name('contact.submit');
+Route::get('/session', [HomeController::class, 'session'])->name('session');
+Route::post('/book',[HomeController::class,'book'])->name('book');
 
 
 

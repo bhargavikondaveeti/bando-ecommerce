@@ -1,16 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\BookSession;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 use App\Models\Product;
 use App\Models\Cart;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\order;
-use Session;
 use Stripe;
 
 
@@ -33,7 +34,7 @@ class HomeController extends Controller
             $total_order=order::all()->count();
             $total_user=user::all()->count();
 
-            $order=order::all();
+            $order=order::where('delivery_status','=','delivered')->get();
             $total_revenue=0;
 
             foreach ($order as $order)
@@ -184,7 +185,7 @@ class HomeController extends Controller
             $order->price=$data->price;
             $order->image=$data->image;
             $order->product_id=$data->product_id;
-            $order->payment_status='cash on delivery';
+            $order->payment_status='cash ';
             $order->delivery_status='processing';
 
             $order->save();
@@ -251,7 +252,7 @@ class HomeController extends Controller
 
         Stripe\Charge::create ([
             "amount" => $totalprice * 100,
-            "currency" => "KES",
+            "currency" => "USD",
             "source" => $request->stripeToken,
             "description" => "Thanks for shopping with us"
         ]);
@@ -295,11 +296,27 @@ class HomeController extends Controller
         return view('home.listen',compact('product'));
     }
 
+    public function mpesaa()
+    {
+        $order=order::all();
+        return view('home.mpesaa');
+    }
+    public function session()
+    {
+        return view('home.session');
+    }
+    public function book(Request $request)
+    {
+        $book = new BookSession();
+        $book -> name = $request ->name;
+        $book -> number = $request -> Number;
+        $book ->artists = $request -> artists;
+        $book -> checkindate = $request -> date;
+        $book -> checkintime = $request -> time;
+        $book-> mpesa = $request -> mpesa;
+        $book -> save();
 
+        return redirect()->back();
 
-
-
-
-
-
+    }
 }

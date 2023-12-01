@@ -98,10 +98,10 @@
                 <div class="div_design" >
 
                     <label>product Catagory</label>
-                    <select class="text_color" name="catagory" style="color: black">
-                        <option value="" selected="" style="color: black">Add catagory here</option>
+                    <select class="text_color" name="catagory">
+                        <option value="" selected="">Add catagory here</option>
                         @foreach($category as $catagory)
-                            <option value="{{$catagory -> catagory_name}}">{{$catagory -> category_name}}</option>
+                            <option style="color: black" value="{{$catagory -> category_name}}">{{$catagory -> category_name}}</option>
                         @endforeach
                     </select>
                 </div>
@@ -115,12 +115,6 @@
 
               </div>
 
-                    <div class="div_design">
-
-                        <label>Audio</label>
-                        <input type="file" name="play"required="">
-
-                    </div>
 
 
                 <div class="div_design" style="margin-bottom: 50px">

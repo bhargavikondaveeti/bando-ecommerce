@@ -9,10 +9,10 @@
         text-align: center;
     }
 </style>
-<div class="cpy_" class="footer">
-    <p class="mx-auto">© 2022 All Rights Reserved By <a href="https://html.design/">GTA-TV</a><br>
+<div style="background: #484545" class="cpy_" class="footer">
+    <p class="mx-auto">© 2023 All Rights Reserved By <a href="/">BANDO MERCH</a><br>
 
-        Distributed By <a href="https://themewagon.com/" target="_blank">nb_codes</a>
+        Distributed By <a href="https://nbcodes.com/" target="_blank">nb_codes</a>
 
     </p>
 </div>

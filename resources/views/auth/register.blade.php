@@ -32,6 +32,9 @@
             <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('Password') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
+                <div id="password-error" class="text-red-600 mt-2" style="display: none;">
+                    Password must be at least 8 characters long and contain at least one special character and one number.
+                </div>
             </div>
 
             <div class="mt-4">
@@ -68,3 +71,20 @@
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const passwordInput = document.getElementById("password");
+        const passwordError = document.getElementById("password-error");
+
+        passwordInput.addEventListener("input", function() {
+            const password = passwordInput.value;
+            const passwordStrengthRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+
+            if (passwordStrengthRegex.test(password)) {
+                passwordError.style.display = "none";
+            } else {
+                passwordError.style.display = "block";
+            }
+        });
+    });
+</script>

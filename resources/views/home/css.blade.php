@@ -1,5 +1,7 @@
+<link rel="stylesheet" type="text/css" href="my/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="my/css/font-awesome.css">
+<link rel="stylesheet" href="my/css/templatemo-softy-pinko.css">
 <link rel="shortcut icon" href="{{ asset('home/images/favicon.png')}}" type="">
-<title>Famms - Fashion HTML Template</title>
 <!-- bootstrap core css -->
 <link rel="stylesheet" type="text/css" href="{{ asset('home/css/bootstrap.css')}}" />
 <!-- font awesome style -->
@@ -16,3 +18,23 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+<link rel="stylesheet" href="{{asset('home/css/body.css')}}"/>
+
+<style>
+    P.blocktext {
+        margin-left: auto;
+        margin-right: auto;
+        width: 8em
+    }
+    .btn-primary{
+        padding-top:10px;
+    }
+    .imgsrc{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+    }
+    .h1dg{
+        text-align: center;
+    }
+</style>

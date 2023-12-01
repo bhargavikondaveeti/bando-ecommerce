@@ -11,7 +11,7 @@
         .center
         {
             margin: auto;
-            width: 50%;
+            width: 100%;
             border: 2px solid green;
             text-align: center;
             margin-top: 40px;

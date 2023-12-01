@@ -15,7 +15,8 @@
         "livewire/livewire": "^2.5",
         "realrashid/sweet-alert": "^5.1",
         "safaricom/mpesa": "^1.0",
-        "stripe/stripe-php": "^9.8"
+        "stripe/stripe-php": "^9.8",
+      "ext-curl": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

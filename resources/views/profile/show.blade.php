@@ -1,9 +1,30 @@
 <x-app-layout>
-    <x-slot name="header">
+<x-slot name="header">
+    <div class="flex justify-between items-center">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Profile') }}
         </h2>
-    </x-slot>
+        <a class="btn btn-green" href = "/redirect">
+            {{ __('HOME') }}
+        </a>
+    </div>
+</x-slot>
+
+<style>
+    .btn {
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .btn-green {
+        background-color: #2ecc71;
+        color: white;
+    }
+</style>
+
+
 
     <div>
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">

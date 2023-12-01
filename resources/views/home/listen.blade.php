@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GTA-TV</title>
+    <title>BANDO MERCH</title>
     @include('home.css')
 
 
@@ -28,15 +28,15 @@
                     @if($product ->discount_price!=null)
                         <h6 style="margin: 10px;color:limegreen">
                             Discount Price  :
-                            KSh. <button class="btn btn-success">{{$product->discount_price}}</button>
+                            $. <button class="btn btn-success">{{$product->discount_price}}</button>
                         </h6>
                         <h6 style="color: red; text-decoration: line-through"><
                             Price
                             <br>
-                            KSh. {{$product->price}}
+                            $. {{$product->price}}
                         </h6>
                     @else
-                        <h6> KSh. {{$product->price}}</h6>
+                        <h6> $. {{$product->price}}</h6>
 
                 </div>
                 @endif
